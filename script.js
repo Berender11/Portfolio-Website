@@ -1,5 +1,4 @@
 //Toggle icon Navbar
-
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
@@ -9,7 +8,6 @@ menuIcon.onclick = () => {
 }
 
 //Scroll section active link
-
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 
@@ -35,3 +33,15 @@ window.onscroll = () => {
     menuIcon.classList.remove("fa-xmark");
     navbar.classList.remove("active");
 };
+
+//Scroll Reveal
+ScrollReveal({
+    distance: "80px",
+    duration: 2000,
+    delay: 200,
+});
+
+ScrollReveal().reveal(".home-container, heading", {origin: "top"});
+ScrollReveal().reveal(".home-image, .services-container, .contact form", {origin: "bottom"});
+ScrollReveal().reveal(".home-contact h1, .about", {origin: "left"});
+ScrollReveal().reveal(".home-contact p, .about-content", {origin: "right"});
